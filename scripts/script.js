@@ -166,6 +166,14 @@ cards.forEach((card) => {
     createCard(card);
 });
 
+//this copy the current info in the perfil to the edit modal
+travelerProfilEditBtn.addEventListener("click", () => {
+    console.log("Si jalaa?")
+    profileName.value = travelerProfileName.textContent;
+    profileDescription.value = travelerProfileBio.textContent;
+    modalProfile.classList.toggle("modal_is-opened");
+});
+
 //This listener modify the profile
 modalProfile.addEventListener("submit", (evt) => {
     evt.preventDefault();
@@ -174,10 +182,4 @@ modalProfile.addEventListener("submit", (evt) => {
     modalProfile.classList.toggle("modal_is-opened");
 });
 
-//this copy the current info in the perfil to the edit modal
-travelerProfilEditBtn.addEventListener("click", () => {
-    console.log("Si jalaa?")
-    profileName.value = travelerProfileName.textContent;
-    profileDescription.value = travelerProfileBio.textContent;
-    modalProfile.classList.toggle("modal_is-opened");
-});
+
